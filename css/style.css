@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  
+  img {
+    max-width: 100%;
+  }
+  
+  body {
+    min-width: 1400px;
+    font-family: 'Josefin Sans', sans-serif;
+    background: radial-gradient(127.81% 252.75% at -24.1% -8.4%, rgba(34, 36, 241, 0.7225) 0%, rgba(102, 102, 171, 0.85) 55.21%, rgba(77, 77, 242, 0.4505) 88.96%, rgba(77, 77, 242, 0.1785) 98.97%) fixed;
+  }
+  
+  /* glob */
+  /* global styles for classes */
+  
+  .title-reset {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .container {
+    width: 1255px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+/* phonebook */
+
+.phonebook {
+  margin-top: 20px;
+  padding: 20px;
+    flex-direction: column;
+    background: linear-gradient(117.07deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 4px 4px 50px 19px rgba(102, 102, 171, 0.307292);
+    border-radius: 50px;
+}
+
+.phonebook-title {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.phonebook-description{
+    margin-bottom: 40px;
+}
+
+.description-text {
+    text-align: center;
+}
+
+.phonebook-list {
+    max-height: 580px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+.phonebook-list-item {
+    margin-bottom: 40px;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    perspective: 1000px;
+    border-radius: 50px;
+}
+
+.phonebook-list-item:not(:nth-child(4n)) {
+    margin-right: 40px;
+}
+
+.list-item-title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+/* animation of card rotation */
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: 2s;
+    backface-visibility: hidden;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.front {
+    text-align: center;
+    padding: 100px 40px;
+}
+
+.back {
+    padding: 40px;
+    flex-direction: column;
+}
+
+.back {
+    transform: rotateY(180deg);
+  }
+  .phonebook-list-item:hover .front {
+    transform: rotateY(180deg);}
+  .phonebook-list-item:hover .back {
+    transform: rotateY(360deg);}    
+
+.back-item{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.back-item-descr{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.back-item-descr{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 18px;
+}
